@@ -1,0 +1,7 @@
+<form #nombre="ngForm" [formGroup]="formulario" (ngSubmit)="aceptarFormulario()">
+    ID: <input type="number" formControlName="id"><br>
+    DNI: <input type="text" formControlName="dni"><br>
+    Nombre: <input type="text" formControlName="nombre"><br>
+    Horas de formacion: <input type="number" formControlName="horas_formacion"><br>
+    <button type="submit">Enviar</button>
+</form>

@@ -1,0 +1,22 @@
+<router-outlet></router-outlet>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>DNI</th>
+            <th>NOMBRE</th>
+            <th>HORAS DE FORMACION</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of listaAlum">
+            <td>{{item.id}}</td>
+            <td>{{item.dni}}</td>
+            <td>{{item.nombre}}</td>
+            <td>{{item.horas_formacion}}</td>
+            <td><button [routerLink]="['formulario', item.id]">Actualizar Alumno</button></td>
+        </tr>
+    </tbody>
+</table>
+<button [routerLink]="['/alta']">Agregar Alumno</button>
+<hr>
